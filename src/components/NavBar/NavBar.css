@@ -1,0 +1,28 @@
+.navbar {
+    padding: 0 0 4rem;
+    background: transparent;
+    position: stick;
+    opacity: 0.7;
+    background-color: #282c34;
+}
+
+.navbar-brand {
+    padding-bottom: 0px;
+}
+
+.navbar-brand p {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 0px;
+    margin-right: 0px;
+}
+
+.nav-item {
+    padding: 0 18px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+    color: white;
+}
