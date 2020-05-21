@@ -1,25 +1,18 @@
-import React from 'react';
-import '../NavBar/NavBar.css'
-import { Link } from 'react-router-dom';
+import React from "react";
+import "../NavBar/NavBar.css";
+// import { Link } from "react-router-dom";
+import { Navbar, Nav } from "react-bootstrap";
 
 const navBar = () => {
-    return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-dark">
-                <a className="navbar-brand"><Link to={'/'} className='nav-link'><h1>Euro 2020 Predictor</h1></Link></a>
-                {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button> */}
-                <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul className="navbar-nav ml-auto">
-                    <li className="nav-item"><Link to={'/'} className="nav-link"> Home </Link></li>
-                    <li className="nav-item"><Link to={'/about'} className="nav-link">About</Link></li>
-                    <li className="nav-item"><Link to={'/teams'} className="nav-link">Teams</Link></li>
-                    </ul>
-                </div>            
-            </nav>
-        </div>
-    )
-}
+  return (
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand href="/">Euro 2020 Precition</Navbar.Brand>
+      <Nav className="mr-auto">
+        <Nav.Link href="/about">About</Nav.Link>
+        <Nav.Link href="/teams">Teams</Nav.Link>
+      </Nav>
+    </Navbar>
+  );
+};
 
 export default navBar;
