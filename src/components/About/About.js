@@ -1,4 +1,5 @@
 import React from "react";
+import Member from "../Member/Member";
 
 export const About = () => (
   <div>
@@ -16,5 +17,10 @@ export const About = () => (
       as opposed to using 'Content here, content here', making it look like
       readable English.
     </p>
+  <Member />
+  <Member />
+  <Member />
+  <Member />
+  <Member />
   </div>
 );
