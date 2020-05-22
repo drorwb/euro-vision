@@ -1,11 +1,20 @@
-import React from 'react';
+import React from "react";
 
-const About = () => {
-    return(
-        <div>
-            <h1 style={{marginBottom: '130px'}}>Here we need to present the project and every stuff member</h1>
-        </div>
-    )
-}
-
-export default About;
+export const About = () => (
+  <div>
+    <h2>About Us</h2>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      Lorem Ipsum has been the industry's standard dummy text ever since the
+      1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    </p>
+    <p>
+      It is a long established fact that a reader will be distracted by the
+      readable content of a page when looking at its layout. The point of using
+      Lorem Ipsum is that it has a more-or-less normal distribution of letters,
+      as opposed to using 'Content here, content here', making it look like
+      readable English.
+    </p>
+  </div>
+);
