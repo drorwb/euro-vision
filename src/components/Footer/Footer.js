@@ -6,23 +6,23 @@ export const Footer = () => {
   return (
     <div className="footer">
       <p>
-        This website was created by -{" "}
+        This website was created by -
         <a
           target="_blank"
           href="https://www.linkedin.com/in/dror-brown-404930177/"
           rel="noopener noreferrer"
         >
           Dror Brown
-        </a>{" "}
-        |{" "}
+        </a>
+        |
         <a
           target="_blank"
           href="https://www.linkedin.com/in/jonathan-morag/"
           rel="noopener noreferrer"
         >
           Jonathan Morag
-        </a>{" "}
-        |{" "}
+        </a>
+        |
         <a
           target="_blank"
           href="https://www.linkedin.com/in/noa-feldberg-9b5917148/"
