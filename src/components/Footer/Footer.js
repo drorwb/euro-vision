@@ -14,7 +14,7 @@ export const Footer = () => {
         >
           Dror Brown
         </a>
-        |
+         | 
         <a
           target="_blank"
           href="https://www.linkedin.com/in/jonathan-morag/"
@@ -22,7 +22,7 @@ export const Footer = () => {
         >
           Jonathan Morag
         </a>
-        |
+         | 
         <a
           target="_blank"
           href="https://www.linkedin.com/in/noa-feldberg-9b5917148/"
