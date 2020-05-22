@@ -1,35 +1,39 @@
 import React from "react";
-import "../Footer/Footer.css";
+import "./Footer.css";
 
-const Footer = () => {
+export const Footer = () => {
   const year = new Date().getFullYear();
   return (
-    <div className="the-footer">
-      <footer>
-        <p>
-          This website is created by -{" "}
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/dror-brown-404930177/"
-          >
-            Dror Brown
-          </a>{" "}
-          |{" "}
-          <a target="_blank" href="https://www.linkedin.com/in/jonathan-morag/">
-            Jonathan Morag
-          </a>{" "}
-          |{" "}
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/noa-feldberg-9b5917148/"
-          >
-            Noa Feldberg
-          </a>
-        </p>
-        <p className="credit">All Rights Reserved © {year} </p>
-      </footer>
+    <div className="footer">
+      <p>
+        This website was created by -{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/dror-brown-404930177/"
+          rel="noopener noreferrer"
+        >
+          Dror Brown
+        </a>{" "}
+        |{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/jonathan-morag/"
+          rel="noopener noreferrer"
+        >
+          Jonathan Morag
+        </a>{" "}
+        |{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/noa-feldberg-9b5917148/"
+          rel="noopener noreferrer"
+        >
+          Noa Feldberg
+        </a>
+        <br />
+        All Rights Reserved © {year}
+        <br />
+      </p>
     </div>
   );
 };
-
-export default Footer;
