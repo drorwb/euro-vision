@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <div className="footer">
       <p>
-        This website was created by -{" "}
+        This website was created by {" "}
         <a
           target="_blank"
           href="https://www.linkedin.com/in/dror-brown-404930177/"
@@ -14,7 +14,7 @@ export const Footer = () => {
         >
           Dror Brown
         </a>{" "}
-        |{" "}
+        |{" "} 
         <a
           target="_blank"
           href="https://www.linkedin.com/in/jonathan-morag/"
@@ -29,6 +29,22 @@ export const Footer = () => {
           rel="noopener noreferrer"
         >
           Noa Feldberg
+        </a>{" "}
+        |{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/tommer-grodecki-82843b174/"
+          rel="noopener noreferrer"
+        >
+          Tommer Grodecki
+        </a>{" "}
+        |{" "}
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/ran-manor-7b86ab186/"
+          rel="noopener noreferrer"
+        >
+          Ran Manor
         </a>
         <br />
         All Rights Reserved © {year}
