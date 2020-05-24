@@ -4,7 +4,7 @@ import { Home } from "../Home/Home";
 import { About } from "../About/About";
 import  Teams from "../Teams/Teams";
 import { Layout } from "../Layout";
-import { NavBar } from "../NavBar/Navbar";
+import  NavBar  from "../NavBar/NavBar";
 import { NoMatch } from "../NoMatch";
 import { Jumbotron } from "../Jumbotron";
 import { Footer } from "../Footer/Footer";
