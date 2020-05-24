@@ -17,7 +17,7 @@ const Styles = styled.div`
   }
 `;
 
-export const NavBar = () => (
+const NavBar = () => (
   <Styles>
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="/">EuroVision</Navbar.Brand>
@@ -29,3 +29,5 @@ export const NavBar = () => (
     </Navbar>
   </Styles>
 );
+
+export default NavBar;
