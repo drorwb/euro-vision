@@ -1,0 +1,32 @@
+.members-container .img-fluid {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  align-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+}
+
+.member {
+  height: 500px;
+  margin-top: 60px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.facebook-icon {
+  margin-right: 8px;
+}
+
+.card-body-member {
+  margin-top: 12px;
+  align-content: center;
+}
+
+.card-body-member .card-title-member {
+  height: auto;
+}
+
+.card-body-member .card-text-member {
+  height: 60px;
+}
