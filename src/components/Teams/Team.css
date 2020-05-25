@@ -5,6 +5,7 @@
     align-content: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin-top: 12px;
+    margin-left: 50px;
 }
 
 .img-fluid:hover{
@@ -15,11 +16,10 @@
     transition: 0.3s;
     border-radius: 5px;
     height: 350px;
-    width: 250px;;
-    margin-top: 40px;
+    width: 250px;
+    margin-bottom: 100px;
     margin-right: 20px;
     text-align: center;
-    /* border: 1px solid; */
 }
 
 .predict-btn{
@@ -34,6 +34,7 @@
     font-size: 20px;
     border-radius: 8px;
     justify-content: center;
+    margin-top: 4px;
 }
 
 .predict-btn:hover{
@@ -44,12 +45,19 @@
 .card-body{
     margin-top: 12px;
     align-content: center;
+    width: 300px;
 }
 
 .card-body .card-title{
-    height: auto;
+    height: 20px;
+    text-decoration: underline;
 }
 
 .card-body .card-text{
-    height: 90px;
+    height: 10px;
+}
+
+p{
+    margin-bottom: 2px;
+    height: 45px;
 }

@@ -1,122 +1,194 @@
 [
-    { 
-        "id": 24,
-        "name": "Albania",
-        "photo": "https://cdn.countryflags.com/thumbs/albania/flag-800.png"
-    },
-    {
-        "id": 10,
-        "name": "Austria",
-        "photo": "https://cdn.countryflags.com/thumbs/austria/flag-800.png"
-    },
-    {
-        "id": 5,
-        "name": "Belgium",
-        "photo": "https://cdn.countryflags.com/thumbs/belgium/flag-800.png"
-    },
-    {
-        "id": 11,
-        "name": "Croatia",
-        "photo": "https://cdn.countryflags.com/thumbs/croatia/flag-800.png"
-    },
-    { 
-        "id": 13,
-        "name": "Czech Republic",
-        "photo": "https://cdn.countryflags.com/thumbs/czech-republic/flag-800.png"
-    },
-    {
-        "id": 3,
-        "name": "England",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_England.svg"
-    },
-    {
-        "id": 6,
-        "name": "France",
-        "photo": "https://cdn.countryflags.com/thumbs/france/flag-800.png"
-    },
-    {
-        "id": 2,
-        "name": "Germany",
-        "photo": "https://cdn.countryflags.com/thumbs/germany/flag-800.png"
-    },
-    {
-        "id": 18,
-        "name": "Hungary",
-        "photo": "https://cdn.countryflags.com/thumbs/hungary/flag-800.png"
-    },
-    {
-        "id": 21,
-        "name": "Iceland",
-        "photo": "https://cdn.countryflags.com/thumbs/iceland/flag-800.png"
-    },
     {
         "id": 7,
         "name": "Italy",
-        "photo": "https://cdn.countryflags.com/thumbs/italy/flag-800.png"
-    },
-    {
-        "id": 23,
-        "name": "Northern Ireland",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Ulster_Banner.svg/1280px-Ulster_Banner.svg.png"
-    },
-    {
-        "id": 15,
-        "name": "Poland",
-        "photo": "https://cdn.countryflags.com/thumbs/poland/flag-800.png"
-    },
-    {
-        "id": 4,
-        "name": "Portugal",
-        "photo": "https://cdn.countryflags.com/thumbs/portugal/flag-800.png"
-    },
-    {
-        "id": 20,
-        "name": "Republic of Ireland",
-        "photo": "https://cdn.countryflags.com/thumbs/ireland/flag-800.png"
-    },
-    {
-        "id": 16,
-        "name": "Romania",
-        "photo": "https://cdn.countryflags.com/thumbs/romania/flag-800.png"
-    },
-    {
-        "id": 8,
-        "name": "Russia",
-        "photo": "https://cdn.countryflags.com/thumbs/russia/flag-800.png"
-    },
-    {
-        "id": 17,
-        "name": "Slovakia",
-        "photo": "https://cdn.countryflags.com/thumbs/slovakia/flag-800.png"
-    },
-    {
-        "id": 1,
-        "name": "Spain",
-        "photo": "https://cdn.countryflags.com/thumbs/spain/flag-800.png"
-    },
-    {
-        "id": 14,
-        "name": "Sweden",
-        "photo": "https://cdn.countryflags.com/thumbs/sweden/flag-800.png"
+        "photo": "https://cdn.countryflags.com/thumbs/italy/flag-800.png",
+        "ranking": 13,
+        "group": "A",
+        "coach": "Roberto Mancini"
     },
     {
         "id": 9,
         "name": "Switzerland",
-        "photo": "https://cdn.countryflags.com/thumbs/switzerland/flag-800.png"
+        "photo": "https://cdn.countryflags.com/thumbs/switzerland/flag-800.png",
+        "ranking": 12,
+        "group": "A",
+        "coach": "Vladimir Petković"
     },
     {
         "id": 19,
         "name": "Turkey",
-        "photo": "https://cdn.countryflags.com/thumbs/turkey/flag-800.png"
-    },
-    {
-        "id": 12,
-        "name": "Ukraine",
-        "photo": "https://cdn.countryflags.com/thumbs/ukraine/flag-800.png"
+        "photo": "https://cdn.countryflags.com/thumbs/turkey/flag-800.png",
+        "ranking": 29,
+        "group": "A",
+        "coach": "Şenol Güneş"
     },
     {
         "id": 22,
         "name": "Wales",
-        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Wales_%281959%E2%80%93present%29.svg/1200px-Flag_of_Wales_%281959%E2%80%93present%29.svg.png"
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Wales_%281959%E2%80%93present%29.svg/1200px-Flag_of_Wales_%281959%E2%80%93present%29.svg.png",
+        "ranking": 23,
+        "group": "A",
+        "coach": "Ryan Giggs"
+    },
+    {
+        "id": 5,
+        "name": "Belgium",
+        "photo": "https://cdn.countryflags.com/thumbs/belgium/flag-800.png",
+        "ranking": 1,
+        "group": "B",
+        "coach": "Roberto Martínez"
+    },
+    {
+        "id": 20,
+        "name": "Finland",
+        "photo": "https://cdn.countryflags.com/thumbs/finland/flag-800.png",
+        "ranking": 58,
+        "group": "B",
+        "coach": "Markku Kanerva"
+    },
+    {
+        "id": 8,
+        "name": "Russia",
+        "photo": "https://cdn.countryflags.com/thumbs/russia/flag-800.png",
+        "ranking": 38,
+        "group": "B",
+        "coach": "Stanislav Cherchesov"
+    },
+    {
+        "id": 25,
+        "name": "Denmark",
+        "photo": "https://cdn.countryflags.com/thumbs/denmark/flag-800.png",
+        "ranking": 16,
+        "group": "B",
+        "coach": "Kasper Hjulmand"
+    },
+    {
+        "id": 10,
+        "name": "Austria",
+        "photo": "https://cdn.countryflags.com/thumbs/austria/flag-800.png",
+        "ranking": 26,
+        "group": "C",
+        "coach": "Franco Foda"
+    },
+    {
+        "id": 21,
+        "name": "Iceland",
+        "photo": "https://cdn.countryflags.com/thumbs/iceland/flag-800.png",
+        "ranking": 39,
+        "group": "C",
+        "coach": "Erik Hamrén"
+    },
+    {
+        "id": 12,
+        "name": "Ukraine",
+        "photo": "https://cdn.countryflags.com/thumbs/ukraine/flag-800.png",
+        "ranking": 24,
+        "group": "C",
+        "coach": "Andriy Shevchenko"
+    },
+    {
+        "id": 16,
+        "name": "Netherlands",
+        "photo": "https://cdn.countryflags.com/thumbs/netherlands/flag-800.png",
+        "ranking": 37,
+        "group": "C",
+        "coach": "Ronald Koeman"
+    },
+    {
+        "id": 11,
+        "name": "Croatia",
+        "photo": "https://cdn.countryflags.com/thumbs/croatia/flag-800.png",
+        "ranking": 6,
+        "group": "D",
+        "coach": "Zlatko Dalić"
+    },
+    { 
+        "id": 13,
+        "name": "Czech Republic",
+        "photo": "https://cdn.countryflags.com/thumbs/czech-republic/flag-800.png",
+        "ranking": 45,
+        "group": "D",
+        "coach": "Jaroslav Šilhavý"
+    },
+    {
+        "id": 3,
+        "name": "England",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/b/be/Flag_of_England.svg",
+        "ranking": 4,
+        "group": "D",
+        "coach": "Gareth Southgate"
+    },
+    {
+        "id": 18,
+        "name": "Norway",
+        "photo": "https://cdn.countryflags.com/thumbs/norway/flag-800.png",
+        "ranking": 52,
+        "group": "D",
+        "coach": "Lars Lagerbäck"
+    },
+    {
+        "id": 15,
+        "name": "Poland",
+        "photo": "https://cdn.countryflags.com/thumbs/poland/flag-800.png",
+        "ranking": 19,
+        "group": "E",
+        "coach": "Jerzy Brzęczek"
+    },
+    {
+        "id": 17,
+        "name": "Slovakia",
+        "photo": "https://cdn.countryflags.com/thumbs/slovakia/flag-800.png",
+        "ranking": 32,
+        "group": "E",
+        "coach": "Pavel Hapal"
+    },
+    {
+        "id": 1,
+        "name": "Spain",
+        "photo": "https://cdn.countryflags.com/thumbs/spain/flag-800.png",
+        "ranking": 8,
+        "group": "E",
+        "coach": "Luis Enrique"
+    },
+    {
+        "id": 14,
+        "name": "Sweden",
+        "photo": "https://cdn.countryflags.com/thumbs/sweden/flag-800.png",
+        "ranking": 17,
+        "group": "E",
+        "coach": "Janne Andersson"
+    },
+    {
+        "id": 6,
+        "name": "France",
+        "photo": "https://cdn.countryflags.com/thumbs/france/flag-800.png",
+        "ranking": 2,
+        "group": "F",
+        "coach": "Didier Deschamps"
+    },
+    {
+        "id": 2,
+        "name": "Germany",
+        "photo": "https://cdn.countryflags.com/thumbs/germany/flag-800.png",
+        "ranking": 15,
+        "group": "F",
+        "coach": "Joachim Löw"
+    },
+    {
+        "id": 4,
+        "name": "Portugal",
+        "photo": "https://cdn.countryflags.com/thumbs/portugal/flag-800.png",
+        "ranking": 7,
+        "group": "F",
+        "coach": "Fernando Santos"
+    },
+    {
+        "id": 23,
+        "name": "Georgia",
+        "photo": "https://cdn.countryflags.com/thumbs/georgia/flag-800.png",
+        "ranking": 36,
+        "group": "F",
+        "coach": "Vladimír Weiss"
     }
 ]
