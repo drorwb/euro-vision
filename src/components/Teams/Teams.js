@@ -10,6 +10,9 @@ let teamsToShow = (
       name={team.name}
       id={team.id}
       photo={team.photo}
+      ranking={team.ranking}
+      group={team.group}
+      coach={team.coach}
     />
     })}
   </div>
