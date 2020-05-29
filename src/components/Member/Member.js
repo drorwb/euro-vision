@@ -7,7 +7,7 @@ export const Member = (props) => (
     <div className="card-body-member">
       <h4 className="card-title-member">{props.name}</h4>
       <p className="card-text-member">Some information about {props.name}</p>
-      <a href={props.facebookUrl}>
+      <a href={props.facebookUrl} target="_blank" rel="noopener noreferrer">
         <img
           className="facebook-icon"
           src="https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512"
@@ -16,7 +16,7 @@ export const Member = (props) => (
           alt=""
         />
       </a>
-      <a href={props.linkedinUrl}>
+      <a href={props.linkedinUrl} target="_blank" rel="noopener noreferrer">
         <img
           className="linkedin-icon"
           href={props.linkedinUrl}
