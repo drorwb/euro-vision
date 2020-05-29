@@ -11,10 +11,12 @@ export const Home = () => {
     var team1 = e.options[e.selectedIndex].value;
     e = document.getElementById("team2");
     var team2 = e.options[e.selectedIndex].value;
-    fetch(`http://localhost:5000/predict_match?team1=${team1}&team2=${team2}`)
-      .then((response) => response.json())
-      .then((res) => setWinner(res.winner))
-      .then(() => <div>{winner}</div>);
+    if (team1 === team2) setWinner("Please select two different teams");
+    else {
+      fetch(`http://localhost:5000/predict_match?team1=${team1}&team2=${team2}`)
+        .then((res) => res.json())
+        .then((res) => setWinner(res.winner));
+    }
   };
 
   return (
@@ -57,7 +59,7 @@ export const Home = () => {
               </a>
             </form>
             <br />
-            <h2 className="winner">{winner ? winner : ""}</h2>
+            <h2 className="winner">{winner}</h2>
           </div>
         </div>
         <div className="predict-option">
