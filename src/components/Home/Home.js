@@ -24,9 +24,10 @@ export const Home = () => {
   const handlePredictStage = () => {
     var e = document.getElementById("team");
     var team = e.options[e.selectedIndex].value;
-    fetch(`http://localhost:5000/predict_stage?team=${team}`)
-      .then((res) => res.json())
-      .then((res) => setStage(res.stage));
+    if (team !== "Choose a team...")
+      fetch(`http://localhost:5000/predict_stage?team=${team}`)
+        .then((res) => res.json())
+        .then((res) => setStage(res.stage));
   };
 
   const handleEuroWinner = () => {
@@ -37,6 +38,10 @@ export const Home = () => {
 
   return (
     <div>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+        rel="stylesheet"
+      ></link>
       <div className="options-select">
         <div className="predict-option">
           <div className="title">1 vs 1</div>

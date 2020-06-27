@@ -97,5 +97,6 @@ body {
 .winner,
 .stage,
 .eurowinner {
+  font-family: "Raleway", sans-serif;
   color: black;
 }
