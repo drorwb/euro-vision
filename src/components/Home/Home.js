@@ -5,6 +5,8 @@ import teamData from "../../teams_data.json";
 
 export const Home = () => {
   const [winner, setWinner] = useState("");
+  const [eurowinner, setEuroWinner] = useState("");
+  const [stage, setStage] = useState("");
 
   const handleOneVsOne = () => {
     var e = document.getElementById("team1");
@@ -17,6 +19,21 @@ export const Home = () => {
         .then((res) => res.json())
         .then((res) => setWinner(res.winner));
     }
+
+  };
+
+  const handlePredictStage = () => {
+    var e = document.getElementById("team");
+    var team = e.options[e.selectedIndex].value;
+    fetch(`http://localhost:5000/predict_stage?team=${team}`)
+      .then((res) => res.json())
+      .then((res) => setStage(res.stage));
+  };
+
+  const handleEuroWinner = () => {
+    fetch("http://localhost:5000/predict_winner")
+      .then((res) => res.json())
+      .then((res) => setEuroWinner(res.eurowinner));
   };
 
   return (
@@ -27,23 +44,19 @@ export const Home = () => {
           <div className="features">
             <form action="/">
               <ul>
-                <li>
-                  <p>Choose first team: </p>
-                </li>
+                <li>First Team</li>
                 <li>
                   <select name="team1" id="team1" required>
-                    <option>-------------</option>
+                    <option>Choose a team...</option>
                     {teamData.map((team, key) => {
                       return <option>{team.name}</option>;
                     })}
                   </select>
                 </li>
-                <li>
-                  <p>Choose second team:</p>
-                </li>
+                <li>Second Team</li>
                 <li>
                   <select name="team2" id="team2" required>
-                    <option>-------------</option>
+                    <option>Choose a team...</option>
                     {teamData.map((team, key) => {
                       return (
                         <option key={key} name={team.name}>
@@ -54,6 +67,7 @@ export const Home = () => {
                   </select>
                 </li>
               </ul>
+              <br />
               <a onClick={handleOneVsOne} className="btn">
                 Let's go!
               </a>
@@ -63,32 +77,46 @@ export const Home = () => {
           </div>
         </div>
         <div className="predict-option">
-          <div className="title">Euro 2020 scenario</div>
-          <img src={euroLogo} alt="cur" className="center" />
-          <a href="#" className="btn">
-            Let's go!
-          </a>
+          <div className="eurotitle">Euro 2020 scenario</div>
+          <form action="/">
+            <img src={euroLogo} alt="cur" className="center" />
+            <a onClick={handleEuroWinner} className="btn">
+              Let's go!
+            </a>
+          </form>
+          <br />
+          <h2 className="eurowinner">{eurowinner}</h2>
         </div>
         <div className="predict-option">
           <div className="title">Specific team scenario</div>
           <div className="features">
-            <ul>
-              <li>
-                <p>Choose the team you want to predict:</p>
-              </li>
-              <li>
-                <select id="national-teams">
-                  <option>-------------</option>
-                  {teamData.map((team, key) => {
-                    return <option>{team.name}</option>;
-                  })}
-                </select>
-              </li>
-            </ul>
+            <form action="/">
+              <ul>
+                <li>
+                  <p>Check out your favourite team!</p>
+                </li>
+                <li>
+                  <select name="team" id="team">
+                    <option>Choose a team...</option>
+                    {teamData.map((team, key) => {
+                      return <option>{team.name}</option>;
+                    })}
+                  </select>
+                </li>
+              </ul>
+              <br />
+              <br />
+              <br />
+              <a onClick={handlePredictStage} className="btn" id="btn3">
+                Let's go!
+              </a>
+            </form>
           </div>
-          <a href="#" className="btn">
-            Let's go!
-          </a>
+          <br />
+          <br />
+          <br />
+          <br />
+          <h2 className="stage">{stage}</h2>
         </div>
         {/* <img src={euroLogo} alt="cur" className="center" /> */}
       </div>
