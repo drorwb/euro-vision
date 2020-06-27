@@ -28,14 +28,14 @@ export const About = () => {
     {
       name: "Tommer Grodecki",
       photo:
-        "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/36763528_10213830126041576_5067445927581581312_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=YL1IKYmWLeYAX__Y5Y2&_nc_ht=scontent.ftlv5-1.fna&oh=27ffdfda767900efb048e7c70e59af76&oe=5EF145DB",
+        "https://scontent.ftlv5-1.fna.fbcdn.net/v/t1.0-9/36763528_10213830126041576_5067445927581581312_n.jpg?_nc_cat=100&_nc_sid=85a577&_nc_ohc=oOCbGAfJVdwAX89M-dp&_nc_ht=scontent.ftlv5-1.fna&oh=c4a4eb0e9079b646a17b596ce8dbc5d0&oe=5F1CC75B",
       facebookUrl: "https://www.facebook.com/tommer.grodecki",
       linkedinUrl: "https://www.linkedin.com/in/tommer-grodecki-82843b174/",
     },
     {
       name: "Ran Manor",
       photo:
-        "https://scontent.ftlv5-1.fna.fbcdn.net/v/t31.0-8/p960x960/15194325_10206981167081058_8811371235164414266_o.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=iNoKN9G3OHgAX8jofs9&_nc_ht=scontent.ftlv5-1.fna&_nc_tp=6&oh=93e807eaed701b9c9392e314a0657af2&oe=5EEF55B6",
+        "https://scontent.ftlv5-1.fna.fbcdn.net/v/t31.0-8/p960x960/15194325_10206981167081058_8811371235164414266_o.jpg?_nc_cat=108&_nc_sid=85a577&_nc_ohc=QD4SKKwkHb4AX9qipGD&_nc_ht=scontent.ftlv5-1.fna&_nc_tp=6&oh=81476632c5f081a47c1ef540b665e4c6&oe=5F1AD736",
       facebookUrl: "https://www.facebook.com/ran.manor.7",
       linkedinUrl: "https://www.linkedin.com/in/ran-manor-7b86ab186/",
     },
