@@ -19,6 +19,7 @@ export const Home = () => {
         .then((res) => res.json())
         .then((res) => setWinner(res.winner));
     }
+
   };
 
   const handlePredictStage = () => {
