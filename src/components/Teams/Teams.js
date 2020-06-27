@@ -1,5 +1,5 @@
 import React from "react";
-import Team from "./Team";
+import { Team } from "./Team";
 import teamData from "../../teams_data.json";
 import "./Teams.css";
 
