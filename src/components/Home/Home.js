@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import euroLogo from "../../assets/euro_logo.svg";
 import "./Home.css";
-import { Popup } from "../Teams/Popup";
+import { Popup } from "../Popup/Popup";
 import teamData from "../../teams_data.json";
 import { useHistory } from "react-router-dom";
 
