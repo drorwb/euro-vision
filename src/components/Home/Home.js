@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import euroLogo from "../../assets/euro_logo.svg";
 import "./Home.css";
+import { Popup } from "../Teams/Popup";
 import teamData from "../../teams_data.json";
 import { useHistory } from "react-router-dom";
 
@@ -8,8 +9,18 @@ export const Home = () => {
   const [winner, setWinner] = useState("");
   const [eurowinner, setEuroWinner] = useState("");
   const [stage, setStage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
   const history = useHistory();
+
+  const togglePopup = () => {
+    var e = document.getElementById("team");
+    var team = e.options[e.selectedIndex].value;
+    fetch(`http://localhost:5000/predict_stage?team=${team}`)
+      .then((res) => res.json())
+      .then((res) => setStage(res.stage));
+    setShowPopup(!showPopup);
+  };
 
   const handleOneVsOne = () => {
     var e = document.getElementById("team1");
@@ -115,16 +126,18 @@ export const Home = () => {
               <br />
               <br />
               <br />
-              <a onClick={handlePredictStage} className="btn" id="btn3">
+              <a onClick={togglePopup.bind(this)} className="btn" id="btn3">
                 Let's go!
               </a>
+              {showPopup ? (
+                <Popup text={stage} closePopup={togglePopup.bind(this)} />
+              ) : null}
             </form>
           </div>
           <br />
           <br />
           <br />
           <br />
-          <h2 className="stage">{stage}</h2>
         </div>
         {/* <img src={euroLogo} alt="cur" className="center" /> */}
       </div>

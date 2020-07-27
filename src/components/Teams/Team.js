@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import "./Team.css";
+import { Popup } from "../Popup/Popup";
 
 export const Team = (props) => {
   const [stage, setStage] = useState("");
+  const [showPopup, setShowPopup] = useState(false);
 
-  const handlePredictStage = (team) => {
-    fetch(`http://localhost:5000/predict_stage?team=${team}`)
+  const togglePopup = () => {
+    fetch(`http://localhost:5000/predict_stage?team=${props.name}`)
       .then((res) => res.json())
       .then((res) => setStage(res.stage));
+    setShowPopup(!showPopup);
   };
 
   return (
@@ -26,15 +29,14 @@ export const Team = (props) => {
           Placed {props.ranking} in FIFA world ranking
         </p>
         <br />
-        <button
-          onClick={() => handlePredictStage(props.name)}
-          className="predict-btn"
-        >
+        <button onClick={togglePopup.bind(this)} className="predict-btn">
           Predict
         </button>
+        {showPopup ? (
+          <Popup text={stage} closePopup={togglePopup.bind(this)} />
+        ) : null}
         <br />
         <br />
-        <h2 className="stage">{stage}</h2>
       </div>
     </div>
   );
