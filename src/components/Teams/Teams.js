@@ -15,7 +15,7 @@ let teamsToShow = (
           ranking={team.ranking}
           group={team.group}
           coach={team.coach}
-        />
+          />
       );
     })}
   </div>

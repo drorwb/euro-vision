@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "../Home/Home";
 import { About } from "../About/About";
+import Prediction from "../Prediction/Prediction"
 import  Teams from "../Teams/Teams";
 import { Layout } from "../Layout";
 import  NavBar  from "../NavBar/NavBar";
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route path="/about" component={About} />
             <Route path="/teams" component={Teams} />
+            <Route path="/prediction" component={Prediction} />
             <Route component={NoMatch} />
           </Switch>
           <br />
