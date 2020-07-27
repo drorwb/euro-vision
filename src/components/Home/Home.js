@@ -2,24 +2,27 @@ import React, { useState } from "react";
 import euroLogo from "../../assets/euro_logo.svg";
 import "./Home.css";
 import teamData from "../../teams_data.json";
+import { useHistory } from "react-router-dom";
 
 export const Home = () => {
   const [winner, setWinner] = useState("");
   const [eurowinner, setEuroWinner] = useState("");
   const [stage, setStage] = useState("");
 
+  const history = useHistory();
+
   const handleOneVsOne = () => {
     var e = document.getElementById("team1");
     var team1 = e.options[e.selectedIndex].value;
     e = document.getElementById("team2");
     var team2 = e.options[e.selectedIndex].value;
-    if (team1 === team2) setWinner("Please select two different teams");
-    else {
-      fetch(`http://localhost:5000/predict_match?team1=${team1}&team2=${team2}`)
-        .then((res) => res.json())
-        .then((res) => setWinner(res.winner));
-    }
-
+    // if (team1 === team2) setWinner("Please select two different teams");
+    // else {
+    //   fetch(`http://localhost:5000/predict_match?team1=${team1}&team2=${team2}`)
+    //     .then((res) => res.json())
+    //     .then((res) => setWinner(res.winner));
+    // }
+    history.push(`/prediction?team1=${team1}&team2=${team2}`);
   };
 
   const handlePredictStage = () => {
