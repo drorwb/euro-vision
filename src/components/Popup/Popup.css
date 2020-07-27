@@ -1,0 +1,41 @@
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.inner {
+  position: fixed;
+  left: 34%;
+  right: 35%;
+  top: 39%;
+  padding: 8px;
+  border-radius: 20px;
+  background: white;
+}
+
+.stage {
+  font-family: "Raleway", sans-serif;
+}
+
+.closebutton {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  padding: 6x 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.closebutton:hover {
+  background-color: #555555;
+  color: white;
+}
