@@ -6,7 +6,7 @@ export const Member = (props) => (
     <img className="img-fluid" src={props.photo} alt={props.name} />
     <div className="card-body-member">
       <h4 className="card-title-member">{props.name}</h4>
-      <p className="card-text-member">Some information about {props.name}</p>
+      <p className="card-text-member">{props.info}</p>
       <a href={props.facebookUrl} target="_blank" rel="noopener noreferrer">
         <img
           className="facebook-icon"

@@ -5,13 +5,14 @@
   align-content: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   margin-bottom: 5px;
+  margin-inline-start: -37px;
+  margin-inline-end: -32px;
 }
 
 .member {
-  height: 350px;
   margin-top: 60px;
-  margin-right: 10px;
   text-align: center;
+  margin-left: -19px;
 }
 
 .facebook-icon {
@@ -29,4 +30,5 @@
 
 .card-body-member .card-text-member {
   height: 60px;
+  margin-right: 12px;
 }
