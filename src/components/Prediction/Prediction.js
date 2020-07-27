@@ -1,47 +1,91 @@
-import React from 'react';
-import '../Prediction/Prediction.css'
-import { Chart } from 'react-google-charts';
-import teamsData from '../../teams_data.json';
+import React from "react";
+import "../Prediction/Prediction.css";
+import { Chart } from "react-google-charts";
+import teamsData from "../../teams_data.json";
 
+class Prediction extends React.Component {
+  state = {
+    team1: "",
+    team2: "",
+    home_rate: 0.0,
+    draw_rate: 0.0,
+    away_rate: 0.0,
+  };
 
-class Prediction extends React.Component{
-    state= {
-        team1: teamsData.find( ({name}) => name==="Spain"),
-        team2: teamsData.find( ({name}) => name==="England")
-    }
-    
-    render(){
-        const { team1, team2 } = this.state;
-        const options = {
-            vAxis: { title: "Victory percentages", viewWindow: { min: 0, max: 100}},
-            hAxis: { title: "National Team", viewWindow: { min: 0, max: 2}},
-            legend: 'none'
-        }
+  componentDidMount() {
+    const query = new URLSearchParams(this.props.location.search);
+    this.setState({
+      team1: teamsData.find(({ name }) => name === query.get("team1")),
+      team2: teamsData.find(({ name }) => name === query.get("team2")),
+    });
+    const { team1, team2 } = this.state;
 
-        return(
-            <div style={{display: 'flex'}}>
-                <div>
-                <Chart
-                    chartType="ColumnChart"
-                    width="200px"
-                    height="600px"
-                    options={options}
-                    data={[
-                        ["National Team", "Winning prediction"],
-                        ["Spain", 0.6*100],
-                        ["England", 0.4*100]
-                    ]}
-                />
-                </div>
-                <div style={{display: 'flex', width: 750, padding: 20, flexFlow: 'row wrap', alignItems: 'center', marginLeft: 60}}>
-                    <img style={{width: 140 ,height: 100, padding: 10}} src={team1.photo} alt={team1.name}/>
-                    <h1 style={{textAlign: 'center'}}>{team1.name} VS {team2.name}</h1>
-                    <img style={{width: 140, height: 100, padding: 10}}  src={team2.photo} alt={team2.name}/>
-                    <p>Based on our machine, in this specific game  the winner is going to be Spain.</p>
-                </div>
-            </div>
-        )
-    }
+    const url = `http://localhost:5000/predict_match?team1=${query.get(
+      "team1"
+    )}&team2=${query.get("team2")}`;
+
+    fetch(url)
+      .then((res) => res.json())
+      .then((res) => {
+        this.setState({
+          home_rate: res.home_rate,
+          draw_rate: res.draw_rate,
+          away_rate: res.away_rate,
+        });
+        console.log(this.state.home_rate);
+      });
+  }
+
+  render() {
+    const { team1, team2, home_rate, draw_rate, away_rate } = this.state;
+    const options = {
+      vAxis: { title: "Victory percentages", viewWindow: { min: 0, max: 100 } },
+      hAxis: { title: "National Team", viewWindow: { min: 0, max: 2 } },
+      legend: "none",
+    };
+
+    return (
+      <div
+        style={{
+          display: "flex",
+          width: 900,
+          padding: 20,
+          flexFlow: "row wrap",
+          alignItems: "center",
+        }}
+      >
+        <img
+          style={{ width: 140, height: 100, padding: 10 }}
+          src={team1.photo}
+          alt={team1.name}
+        />
+        <h1 style={{ textAlign: "center" }}>
+          {team1.name} vs. {team2.name}
+        </h1>
+        <img
+          style={{ width: 140, height: 100, padding: 10 }}
+          src={team2.photo}
+          alt={team2.name}
+        />
+        <Chart
+          chartType="PieChart"
+          width="500px"
+          height="600px"
+          options={options}
+          data={[
+            ["National Team", "Winning prediction"],
+            [team1.name, home_rate * 100],
+            ["Draw", draw_rate * 100],
+            [team2.name, away_rate * 100],
+          ]}
+        />
+        {/* <p>
+          Based on our machine, in this specific game the winner is going to be
+          Spain.
+        </p> */}
+      </div>
+    );
+  }
 }
 
 export default Prediction;
@@ -106,10 +150,10 @@ export default Prediction;
 //                         </table>
 //                     </div>
 //                     </li>
-                    
+
 //                     <li class="tournament-bracket__item">
 //                     <div class="tournament-bracket__match" tabindex="0">
-//                         <table class="tournament-bracket__table"> 
+//                         <table class="tournament-bracket__table">
 //                         <tbody class="tournament-bracket__content">
 //                             <tr class="tournament-bracket__team tournament-bracket__team--winner">
 //                             <td class="tournament-bracket__country">
