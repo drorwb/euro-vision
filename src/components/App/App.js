@@ -2,10 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { Home } from "../Home/Home";
 import { About } from "../About/About";
-import Prediction from "../Prediction/Prediction"
-import  Teams from "../Teams/Teams";
+import Prediction from "../Prediction/Prediction";
+import Teams from "../Teams/Teams";
 import { Layout } from "../Layout";
-import  NavBar  from "../NavBar/NavBar";
+import NavBar from "../NavBar/NavBar";
 import { NoMatch } from "../NoMatch";
 import { Jumbotron } from "../Jumbotron";
 import { Footer } from "../Footer/Footer";
