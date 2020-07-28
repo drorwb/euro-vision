@@ -31,6 +31,8 @@
   background: #1f2124;
   color: white;
   float: left;
+  align-items: center;
+  justify-content: center;
 }
 
 .predict-option:nth-child(2) {
@@ -81,9 +83,7 @@ body {
   padding: 15px 20px;
   margin: 20px 0;
   border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.9);
-  transition: all 200ms ease-in-out;
-  text-decoration: none;
+  width: 100%;
 }
 
 .btn:hover {

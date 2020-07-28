@@ -33,7 +33,7 @@ export const Team = (props) => {
           Predict
         </button>
         {showPopup ? (
-          <Popup text={stage} closePopup={togglePopup.bind(this)} />
+          <Popup text={'The prediction for ' + props.name + ' is:'} stage={stage} closePopup={togglePopup.bind(this)} />
         ) : null}
         <br />
         <br />
