@@ -11,7 +11,7 @@ export const Popup = (props) => {
       <div className="inner">
         <h1 className="stage">{props.text}</h1>
         <br />
-        {props.stage? <h1 className="stage">{props.stage}</h1> : null}
+        {props.stage ? <h1 className="stage">{props.stage}</h1> : null}
         <button onClick={props.closePopup} className="closebutton">
           Close
         </button>

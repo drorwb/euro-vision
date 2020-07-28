@@ -29,7 +29,6 @@ class Prediction extends React.Component {
           draw_rate: res.draw_rate,
           away_rate: res.away_rate,
         });
-        console.log(this.state.home_rate);
       });
   }
 

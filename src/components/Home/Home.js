@@ -6,49 +6,51 @@ import teamData from "../../teams_data.json";
 import { useHistory } from "react-router-dom";
 
 export const Home = () => {
-  const [winner, setWinner] = useState("");
-  const [eurowinner, setEuroWinner] = useState("");
+  const [euroWinner, setEuroWinner] = useState("");
   const [stage, setStage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [winnerPopup, setWinnerPopup] = useState(false);
+  const [vsPopup, setVsPopup] = useState(false);
 
   const history = useHistory();
-
-  const togglePopup = () => {
-    var e = document.getElementById("team");
-    var team = e.options[e.selectedIndex].value;
-    fetch(`http://localhost:5000/predict_stage?team=${team}`)
-      .then((res) => res.json())
-      .then((res) => setStage(res.stage));
-    setShowPopup(!showPopup);
-  };
 
   const handleOneVsOne = () => {
     var e = document.getElementById("team1");
     var team1 = e.options[e.selectedIndex].value;
     e = document.getElementById("team2");
     var team2 = e.options[e.selectedIndex].value;
-    // if (team1 === team2) setWinner("Please select two different teams");
-    // else {
-    //   fetch(`http://localhost:5000/predict_match?team1=${team1}&team2=${team2}`)
-    //     .then((res) => res.json())
-    //     .then((res) => setWinner(res.winner));
-    // }
-    history.push(`/prediction?team1=${team1}&team2=${team2}`);
+    if (team1 === team2 || team1 === "Choose a team..." || team2 === "Choose a team...")
+      setVsPopup(!vsPopup)
+    else {
+      history.push(`/prediction?team1=${team1}&team2=${team2}`);
+    }
   };
 
   const handlePredictStage = () => {
     var e = document.getElementById("team");
     var team = e.options[e.selectedIndex].value;
-    if (team !== "Choose a team...")
+    if(team==="Choose a team..."){
+      setStage("Please select national team");
+      setShowPopup(!showPopup);
+    }
+    else{
       fetch(`http://localhost:5000/predict_stage?team=${team}`)
         .then((res) => res.json())
-        .then((res) => setStage(res.stage));
+        .then((res) => setStage(res.stage))
+        .then(()=>setShowPopup(!showPopup));
+    }
   };
 
   const handleEuroWinner = () => {
-    fetch("http://localhost:5000/predict_winner")
+    fetch('http://localhost:5000/predict_winner')
       .then((res) => res.json())
-      .then((res) => setEuroWinner(res.eurowinner));
+      .then((res) => {
+        setEuroWinner(res.eurowinner);
+        console.log(euroWinner);
+      })
+      .then(()=>setWinnerPopup(!winnerPopup));
+
+    console.log('done');
   };
 
   return (
@@ -90,22 +92,30 @@ export const Home = () => {
               <a onClick={handleOneVsOne} className="btn">
                 Let's go!
               </a>
+              {vsPopup ? 
+              <Popup text={"Please select two different teams"}closePopup={()=>{setVsPopup(!vsPopup)}} />
+              :
+              null
+            }
             </form>
-            <br />
-            <h2 className="winner">{winner}</h2>
           </div>
         </div>
+        
         <div className="predict-option">
           <div className="eurotitle">Euro 2020 scenario</div>
           <form action="/">
             <img src={euroLogo} alt="cur" className="center" />
-            <a onClick={handleEuroWinner} className="btn">
+            <a onClick={handleEuroWinner.bind(this)} className="btn">
               Let's go!
             </a>
+            {winnerPopup ? (
+                <Popup text={euroWinner} closePopup={()=>{setWinnerPopup(!winnerPopup)}} />
+              ) : null}
           </form>
           <br />
-          <h2 className="eurowinner">{eurowinner}</h2>
+          <h2 className="euroWinner">{euroWinner}</h2>
         </div>
+        
         <div className="predict-option">
           <div className="title">Specific team scenario</div>
           <div className="features">
@@ -126,11 +136,11 @@ export const Home = () => {
               <br />
               <br />
               <br />
-              <a onClick={togglePopup.bind(this)} className="btn" id="btn3">
+              <a onClick={handlePredictStage.bind(this)} className="btn" id="btn3">
                 Let's go!
               </a>
               {showPopup ? (
-                <Popup text={stage} closePopup={togglePopup.bind(this)} />
+                <Popup text={stage} closePopup={()=>{setShowPopup(!showPopup)}} />
               ) : null}
             </form>
           </div>
@@ -139,7 +149,6 @@ export const Home = () => {
           <br />
           <br />
         </div>
-        {/* <img src={euroLogo} alt="cur" className="center" /> */}
       </div>
     </div>
   );
