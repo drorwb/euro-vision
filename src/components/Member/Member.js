@@ -3,7 +3,11 @@ import "../Member/Member.css";
 
 export const Member = (props) => (
   <div className="member">
-    <img className="img-fluid" src={props.photo} alt={props.name} />
+    <img
+      className="img-fluid"
+      src={require(`../../assets/members-images/${props.name}.jpg`)}
+      alt={props.name}
+    />
     <div className="card-body-member">
       <h4 className="card-title-member">{props.name}</h4>
       <p className="card-text-member">{props.info}</p>

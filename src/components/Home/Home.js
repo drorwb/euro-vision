@@ -19,8 +19,12 @@ export const Home = () => {
     var team1 = e.options[e.selectedIndex].value;
     e = document.getElementById("team2");
     var team2 = e.options[e.selectedIndex].value;
-    if (team1 === team2 || team1 === "Choose a team..." || team2 === "Choose a team...")
-      setVsPopup(!vsPopup)
+    if (
+      team1 === team2 ||
+      team1 === "Choose a team..." ||
+      team2 === "Choose a team..."
+    )
+      setVsPopup(!vsPopup);
     else {
       history.push(`/prediction?team1=${team1}&team2=${team2}`);
     }
@@ -29,28 +33,27 @@ export const Home = () => {
   const handlePredictStage = () => {
     var e = document.getElementById("team");
     var team = e.options[e.selectedIndex].value;
-    if(team==="Choose a team..."){
+    if (team === "Choose a team...") {
       setStage("Please select national team");
       setShowPopup(!showPopup);
-    }
-    else{
+    } else {
       fetch(`http://localhost:5000/predict_stage?team=${team}`)
         .then((res) => res.json())
         .then((res) => setStage(res.stage))
-        .then(()=>setShowPopup(!showPopup));
+        .then(() => setShowPopup(!showPopup));
     }
   };
 
   const handleEuroWinner = () => {
-    fetch('http://localhost:5000/predict_winner')
+    fetch("http://localhost:5000/predict_winner")
       .then((res) => res.json())
       .then((res) => {
         setEuroWinner(res.eurowinner);
         console.log(euroWinner);
       })
-      .then(()=>setWinnerPopup(!winnerPopup));
+      .then(() => setWinnerPopup(!winnerPopup));
 
-    console.log('done');
+    console.log("done");
   };
 
   return (
@@ -92,15 +95,18 @@ export const Home = () => {
               <a onClick={handleOneVsOne} className="btn">
                 Let's go!
               </a>
-              {vsPopup ? 
-              <Popup text={"Please select two different teams"}closePopup={()=>{setVsPopup(!vsPopup)}} />
-              :
-              null
-            }
+              {vsPopup ? (
+                <Popup
+                  text={"Please select two different teams"}
+                  closePopup={() => {
+                    setVsPopup(!vsPopup);
+                  }}
+                />
+              ) : null}
             </form>
           </div>
         </div>
-        
+
         <div className="predict-option">
           <div className="eurotitle">Euro 2020 scenario</div>
           <form action="/">
@@ -109,13 +115,18 @@ export const Home = () => {
               Let's go!
             </a>
             {winnerPopup ? (
-                <Popup text={euroWinner} closePopup={()=>{setWinnerPopup(!winnerPopup)}} />
-              ) : null}
+              <Popup
+                text={euroWinner}
+                closePopup={() => {
+                  setWinnerPopup(!winnerPopup);
+                }}
+              />
+            ) : null}
           </form>
           <br />
           <h2 className="euroWinner">{euroWinner}</h2>
         </div>
-        
+
         <div className="predict-option">
           <div className="title">Specific team scenario</div>
           <div className="features">
@@ -136,11 +147,20 @@ export const Home = () => {
               <br />
               <br />
               <br />
-              <a onClick={handlePredictStage.bind(this)} className="btn" id="btn3">
+              <a
+                onClick={handlePredictStage.bind(this)}
+                className="btn"
+                id="btn3"
+              >
                 Let's go!
               </a>
               {showPopup ? (
-                <Popup text={stage} closePopup={()=>{setShowPopup(!showPopup)}} />
+                <Popup
+                  text={stage}
+                  closePopup={() => {
+                    setShowPopup(!showPopup);
+                  }}
+                />
               ) : null}
             </form>
           </div>
