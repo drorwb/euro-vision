@@ -30,6 +30,16 @@ export const Member = (props) => (
           alt=""
         />
       </a>
+      <a href={props.githubUrl} target="_blank" rel="noopener noreferrer">
+        <img
+          className="github-icon"
+          href={props.githubUrl}
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/1024px-Font_Awesome_5_brands_github.svg.png"
+          width="30px"
+          height="30px"
+          alt=""
+        />
+      </a>
     </div>
   </div>
 );

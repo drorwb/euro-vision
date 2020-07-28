@@ -8,30 +8,35 @@ export const About = () => {
       name: "Dror Brown",
       facebookUrl: "https://www.facebook.com/dror.brown",
       linkedinUrl: "https://www.linkedin.com/in/dror-brown-404930177/",
-      info: "Full Stack Developer, excells in React and frontend tasks",
+      githubUrl: "https://github.com/drorwb",
+      info: "Full Stack Developer, excels in React and frontend tasks",
     },
     {
       name: "Jonathan Morag",
       facebookUrl: "https://www.facebook.com/moragjonathan",
       linkedinUrl: "https://www.linkedin.com/in/jonathan-morag/",
-      info: "Full Stack Developer, excells in Node.js and backend tasks",
+      githubUrl: "https://github.com/jonathanmorag",
+      info: "Full Stack Developer, excels in Node.js and backend tasks",
     },
     {
       name: "Noa Feldberg",
       facebookUrl: "https://www.facebook.com/noa7feld",
       linkedinUrl: "https://www.linkedin.com/in/noa-feldberg-9b5917148/",
+      githubUrl: "https://github.com/noaFeldberg",
       info: "Full Stack Developer and Automation Java Developer",
     },
     {
       name: "Tommer Grodecki",
       facebookUrl: "https://www.facebook.com/tommer.grodecki",
       linkedinUrl: "https://www.linkedin.com/in/tommer-grodecki-82843b174/",
+      githubUrl: "https://github.com/Tommergro",
       info: "Algorithms and Neural Networks expert",
     },
     {
       name: "Ran Manor",
       facebookUrl: "https://www.facebook.com/ran.manor.7",
       linkedinUrl: "https://www.linkedin.com/in/ran-manor-7b86ab186/",
+      githubUrl: "https://github.com/ranmanor",
       info: "Algorithms and Neural Networks expert",
     },
   ];
@@ -69,6 +74,7 @@ export const About = () => {
               photo={member.photo}
               facebookUrl={member.facebookUrl}
               linkedinUrl={member.linkedinUrl}
+              githubUrl={member.githubUrl}
               info={member.info}
             />
           );
