@@ -50,7 +50,6 @@ class Prediction extends React.Component {
 
   render() {
     const { team1, team2, home_rate, draw_rate, away_rate } = this.state;
-    console.log(team1, team2, home_rate, draw_rate, away_rate);
     const options = {
       legend: { position: "labeled" },
       is3D: true,
